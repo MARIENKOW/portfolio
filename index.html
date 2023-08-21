@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>upWork</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/aos.css">
+   <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+   <svg style="display:none;width:10px">
+      <symbol id="telegram" viewBox="0 0 24 24">
+         <g>
+            <path d="M19.2,4.4L2.9,10.7c-1.1,0.4-1.1,1.1-0.2,1.3l4.1,1.3l1.6,4.8c0.2,0.5,0.1,0.7,0.6,0.7c0.4,0,0.6-0.2,0.8-0.4
+            c0.1-0.1,1-1,2-2l4.2,3.1c0.8,0.4,1.3,0.2,1.5-0.7l2.8-13.1C20.6,4.6,19.9,4,19.2,4.4z M17.1,7.4l-7.8,7.1L9,17.8L7.4,13l9.2-5.8
+            C17,6.9,17.4,7.1,17.1,7.4z"/>
+         </g>
+      </symbol>
+      <symbol id="github" viewBox="0 0 1920 1920">
+         <g>
+            <path d="M1873.256 674.212c0-122.468-35.728-230.622-106.325-321.88 15.712-57.683 32.5-171.972-20.77-313.703-5.596-15.066-17.864-26.796-33.146-32.07-19.155-6.564-122.144-30.347-328.552 110.953-84.157-22.169-172.94-33.576-264.844-34.114-91.582.538-180.366 11.945-264.306 34.114C648.689-23.68 545.7-.005 526.437 6.56c-15.282 5.165-27.55 17.003-33.146 32.177-53.162 141.623-36.374 255.912-20.555 313.594-70.704 91.582-106.54 199.629-106.54 321.88 0 422.826 221.905 557.131 432.188 605.666-46.49 50.903-95.24 125.158-105.68 219.537-71.78 26.044-257.633 78.13-325.109-44.015-3.013-5.596-73.394-137.641-215.017-148.08-25.075 1.184-84.587 4.305-101.052 54.346-18.51 55.961 39.495 97.716 67.906 117.41.538.323 55.745 31.962 93.841 132.045.969 4.628 23.783 114.72 134.951 181.55 87.492 52.731 202.319 63.493 341.252 32.284 0 23.46-.323 48.212-.43 63.386l-.324 31.101H796.34l.215-29.81c1.937-161.532 2.045-164.653-30.778-181.656-12.484-6.457-27.012-7.964-40.356-3.659-136.243 41.002-246.98 40.033-320.052-2.798-70.488-41.54-85.985-108.908-88.89-119.67-3.875-10.653-8.072-20.662-12.269-30.24 126.987 145.713 372.138 77.161 463.289 33.792 18.833-8.825 30.778-27.765 30.778-48.535 0-149.372 148.295-244.182 149.802-245.15 19.371-12.16 28.949-35.19 23.998-57.36-4.95-22.276-23.352-39.065-46.06-41.755-223.626-26.796-452.204-109.338-452.204-518.388 0-106.325 33.577-198.983 99.76-275.175 12.915-15.067 16.681-36.052 9.579-54.562-9.793-25.397-36.482-112.782-.323-234.819 35.729 4.09 110.845 24.321 231.16 110.307 13.344 9.578 30.455 12.376 46.383 7.856 80.497-23.568 170.356-36.267 259.248-36.805 89.321.538 179.073 13.237 259.786 36.805 15.927 4.52 32.93 1.722 46.382-7.856 121.176-86.631 196.4-106.433 230.73-110.63 36.482 122.145 9.793 209.745 0 235.142-7.21 18.51-3.444 39.603 9.578 54.562 66.076 75.977 99.545 168.527 99.545 275.175 0 409.157-229.115 491.161-453.173 517.527-20.985 2.475-38.634 16.896-44.984 37.02-6.456 20.017-.538 42.078 15.067 56.284 6.35 5.703 14.958 12.483 25.074 20.231 51.333 39.28 137.211 105.034 137.211 259.571 0 85.448-1.399 354.273-1.399 354.273l107.617.539s1.399-269.257 1.399-354.812c0-141.838-56.499-229.976-110.845-285.937 210.39-48.427 431.65-182.517 431.65-604.696" fill-rule="evenodd"/>
+         </g>
+      </symbol>
+      <symbol id="linked" viewBox="0 0 20 20">
+         <g>
+            <path d="M2.5 18h3V6.9h-3V18zM4 2c-1 0-1.8.8-1.8 1.8S3 5.6 4 5.6s1.8-.8 1.8-1.8S5 2 4 2zm6.6 6.6V6.9h-3V18h3v-5.7c0-3.2 4.1-3.4 4.1 0V18h3v-6.8c0-5.4-5.7-5.2-7.1-2.6z"/>
+         </g>
+      </symbol>
+      <symbol id="work" viewBox="0 0 14 14">
+         <g>
+            <path d="m 10.2805,7.579 c -0.551,0 -1.0675,-0.2335 -1.537,-0.6135 l 0.114,-0.538 0.004,-0.021 c 0.1035,-0.5715 0.4245,-1.53 1.4195,-1.53 0.746,0 1.3515,0.606 1.3515,1.3515 -5e-4,0.7445 -0.606,1.351 -1.352,1.351 z m 0,-4.07 C 9.011,3.509 8.0255,4.3335 7.6255,5.692 7.0155,4.775 6.5515,3.674 6.282,2.746 l -1.368,0 0,3.556 C 4.913,7.005 4.3435,7.575 3.6405,7.576 2.938,7.575 2.369,7.0045 2.368,6.302 l 0,-3.556 -1.368,0 0,3.556 C 1,7.759 2.185,8.9535 3.6405,8.9535 5.097,8.9535 6.282,7.759 6.282,6.302 l 0,-0.595 c 0.2645,0.5535 0.591,1.1145 0.987,1.6105 l -0.8365,3.9365 1.3985,0 0.6065,-2.855 C 8.969,8.7385 9.58,8.9535 10.2805,8.9535 11.7805,8.9535 13,7.7275 13,6.2285 13,4.7285 11.7805,3.509 10.2805,3.509 Z"/>
+         </g>
+      </symbol>
+      <symbol id="arrow2" viewBox="0 0 50 46">
+         <g>
+            <path d="M43.5515 0L50 4.63949L22.0404 46H15.5919L0 23.5923L6.44851 17.4227L18.8162 29.2682L43.5515 0Z"/>
+         </g>
+      </symbol>
+      <symbol fill="transparent" id="leftArrow" viewBox="0 0 34 34">
+         <g>
+            <path d="M27 16H5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 7L5 16L14 25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+      </symbol>
+      <symbol fill="transparent" id="rightArrow" viewBox="0 0 34 34">
+         <g>
+            <path d="M5 16H27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 7L27 16L18 25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+      </symbol>
+   </svg>
+</head>
+<body>
+   <section class="wrapper">
+      <header class="header">
+         <section class="container">
+            <div class="header__inner">
+               <section data-smooth="top" class="header__logo">
+                  <h1 class="header__name transparentStroke transparentStroke--white">MARIENKOV</h1>
+                  <span>Portfolio</span>
+               </section>
+               <nav class="header__navigation">
+                  <a data-smooth="top" href="#" class="header__link">Main</a>
+                  <a data-smooth=".projects" href="#" class="header__link">Projects</a>
+                  <a data-smooth=".reviews" href="#" class="header__link">Reviews</a>
+                  <a data-smooth=".skills" href="#" class="header__link">Skills</a>
+               </nav>
+               <section class="header__right">
+                  <button data-smooth=".contact" class="btn btn--header">Send a Letter</button>
+               </section>
+               <button class="header__burger _burger">
+                  <span></span>
+               </button>
+            </div>
+         </section>
+      </header>
+      <main>
+         <div class="intro">
+            <div class="container">
+               <div class="intro__inner">
+                  <section data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="400" class="intro__profile shadow">
+                     <div class="intro__title">
+                        <h2 class="intro__name">Denis<br>Marienkov</h2>
+                        <h3 class="intro__position">Front-end<br>Developer</h3>
+                     </div>
+                     
+                     <div class="intro__photo">
+                        <img src="img/intro/intro.jpg" alt="intro-logo">
+                     </div>
+                     <div class="intro__subtitle">
+                        <a href="mailto:den.marienkow@gmail.com">den.marienkow@gmail.com</a>
+                        <p>Sumy | Ukraine</p>
+                     </div>
+                     
+                     <section class="intro__social">
+                        <a target="_blank" href="https://t.me/Denis_Marienkow" class="intro__link">
+                           <svg class="svg intro__svg">
+                              <use xlink:href="#telegram"></use>
+                           </svg>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/denis-marienkov-62b91b25b/" class="intro__link">
+                           <svg class="svg intro__svg">
+                              <use xlink:href="#linked"></use>
+                           </svg>
+                        </a>
+                        <a target="_blank" href="https://www.upwork.com/freelancers/~01cd230a15ab74dae7" class="intro__link">
+                           <svg class="svg intro__svg">
+                              <use xlink:href="#work"></use>
+                           </svg>
+                        </a>
+                        <a target="_blank" href="https://github.com/MARIENKOW" class="intro__link">
+                           <svg class="svg intro__svg">
+                              <use xlink:href="#github"></use>
+                           </svg>
+                        </a>
+                        
+                     </section>
+                     <button data-smooth=".contact" class="btn intro__btn">
+                        Send a Letter
+                     </button>
+                  </section>
+                  <article class="intro__article">
+                  </article>
+               </div>
+            </div>
+         </div>
+         <div class="skills">
+            <div class="container">
+               <div class="skills__inner">
+                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100" class="skills__title">My Advantages</h1>
+                  <section data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" class="shadow skills__main">
+                     <section class="skills__block">
+                        <div class="skills__info">
+                           <span>HTML/CSS</span>
+                           <span>90%</span>
+                        </div>
+                        <div class="skills__line skills__line--web"></div>
+                     </section>
+                     <section class="skills__block">
+                        <div class="skills__info">
+                           <span>SCSS/BEM</span>
+                           <span>85%</span>
+                        </div>
+                        <div class="skills__line skills__line--pre"></div>
+                     </section>
+                     <section class="skills__block">
+                        <div class="skills__info">
+                           <span>JavaScript</span>
+                           <span>90%</span>
+                        </div>
+                        <div class="skills__line skills__line--js"></div>
+                     </section>
+                     <section class="skills__block">
+                        <div class="skills__info">
+                           <span>React.JS</span>
+                           <span>50%</span>
+                        </div>
+                        <div class="skills__line skills__line--react"></div>
+                     </section>
+                     <section class="skills__block">
+                        <div class="skills__info">
+                           <span>PHP</span>
+                           <span>40%</span>
+                        </div>
+                        <div class="skills__line skills__line--php"></div>
+                     </section>
+                     <section class="skills__block">
+                        <div class="skills__info">
+                           <span>MySQL</span>
+                           <span>65%</span>
+                        </div>
+                        <div class="skills__line skills__line--sql"></div>
+                     </section>
+                  </section>
+               </div>
+            </div>
+         </div>
+         <div class="projects">
+            <div class="container">
+               <div class="projects__inner">
+                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300" data-aos-delay="0" class="projects__title">Projects</h1>
+                  <div class="projects__main">
+                     <section class="projects__block">
+                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="0" class="projects__card shadow">
+                           <div class="projects__skils">
+                              <button class="projects__btn">JavaScript</button>
+                              <button class="projects__btn">HTML/CSS</button>
+                              <button class="projects__btn">BEM/SCSS</button>
+                              <button class="projects__btn">PHP</button>
+                              <button class="projects__btn">MySQL</button>
+                           </div>
+                           <div class="projects__info">
+                              <h1 class="projects__name">BORSA online store</h1>
+                              <article class="projects__wrapper">
+                                 <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus itaque obcaecati distinctio nisi voluptate maiores, fuga totam deleniti!</p>
+                                 <a target="_blank" href="https://github.com/MARIENKOW/project_1" class="btn projects__visite">visite</a>
+                              </article>
+                           </div>
+                        </div>
+                        <div class="projects__mobile">
+                           <h1 data-spoiler="868" class="projects__name">BORSA online store</h1>
+                           <article class="projects__wrapper">
+                              <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus itaque obcaecati distinctio nisi voluptate maiores, fuga totam deleniti!</p>
+                              <a target="_blank" href="https://github.com/MARIENKOW/project_1" class="btn projects__visite">visite</a>
+                           </article>
+                        </div>
+                     </section>
+                     <section class="projects__block">
+                        <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200" class="projects__card shadow projects__card--2">
+                           <div class="projects__skils">
+                              <button class="projects__btn">JavaScript</button>
+                              <button class="projects__btn">HTML/CSS</button>
+                              <button class="projects__btn">BEM/SCSS</button>
+                              <button class="projects__btn">JQuery</button>
+                           </div>
+                           <div class="projects__info">
+                              <h1 class="projects__name">HEADPHONES Seller Landing Page</h1>
+                              <article class="projects__wrapper">
+                                 <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi</p>
+                                 <a target="_blank" href="https://marienkow.github.io/landing_3/" class="btn projects__visite">visite</a>
+                              </article>
+                           </div>
+                        </div>
+                        <div class="projects__mobile">
+                           <h1 data-spoiler="868" class="projects__name">HEADPHONES Seller Landing Page</h1>
+                           <article class="projects__wrapper">
+                              <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus itaque obcaecati distinctio nisi voluptate maiores, fuga totam deleniti!</p>
+                              <a target="_blank" href="https://marienkow.github.io/landing_3/" class="btn projects__visite">visite</a>
+                           </article>
+                        </div>
+                     </section>
+                     <section class="projects__block">
+                        <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" class="projects__card shadow projects__card--3">
+                           <div class="projects__skils">
+                              <button class="projects__btn">JavaScript</button>
+                              <button class="projects__btn">HTML/CSS</button>
+                              <button class="projects__btn">BEM/SCSS</button>
+                              <button class="projects__btn">PHP</button>
+                           </div>
+                           <div class="projects__info">
+                              <h1 class="projects__name">TrustFinance Landing Page</h1>
+                              <article class="projects__wrapper">
+                                 <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus</p>
+                                 <a target="_blank" href="https://marienkow.github.io/trustFinance/" class="btn projects__visite">visite</a>
+                              </article>
+                           </div>
+                        </div>
+                        <div class="projects__mobile">
+                           <h1 data-spoiler="868" class="projects__name">TrustFinance Landing Page</h1>
+                           <article class="projects__wrapper">
+                              <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus itaque obcaecati distinctio nisi voluptate maiores, fuga totam deleniti!</p>
+                              <a target="_blank" href="https://marienkow.github.io/trustFinance/" class="btn projects__visite">visite</a>
+                           </article>
+                        </div>
+                     </section>
+                     <section class="projects__block">
+                        <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200"  class="projects__card shadow projects__card--5">
+                           <div class="projects__skils">
+                              <button class="projects__btn">JavaScript</button>
+                              <button class="projects__btn">HTML/CSS</button>
+                              <button class="projects__btn">BEM/SCSS</button>
+                           </div>
+                           <div class="projects__info">
+                              <h1 class="projects__name">SUBLIME Landing Page</h1>
+                              <article class="projects__wrapper">
+                                 <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus</p>
+                                 <a target="_blank" href="https://marienkow.github.io/landing_1/" class="btn projects__visite">visite</a>
+                              </article>
+                           </div>
+                        </div>
+                        <div class="projects__mobile">
+                           <h1 data-spoiler="868" class="projects__name">SUBLIME Landing Page</h1>
+                           <article class="projects__wrapper">
+                              <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus itaque obcaecati distinctio</p>
+                              <a target="_blank" href="https://marienkow.github.io/landing_1/" class="btn projects__visite">visite</a>
+                           </article>
+                        </div>
+                     </section>
+                     <section class="projects__block">
+                        <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200" class="projects__card shadow projects__card--4">
+                           <div class="projects__skils">
+                              <button class="projects__btn">JavaScript</button>
+                              <button class="projects__btn">HTML/CSS</button>
+                              <button class="projects__btn">BEM/SCSS</button>
+                              <button class="projects__btn">JQuery</button>
+                           </div>
+                           <div class="projects__info">
+                              <h1 class="projects__name">HAUS Alcohol Seller Landing Page</h1>
+                              <article class="projects__wrapper">
+                                 <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus itaque</p>
+                                 <a target="_blank" href="https://marienkow.github.io/landing_2/" class="btn projects__visite">visite</a>
+                              </article>
+                           </div>
+                        </div>
+                        <div class="projects__mobile">
+                           <h1 data-spoiler="868" class="projects__name">HAUS Alcohol Seller Landing Page</h1>
+                           <article class="projects__wrapper">
+                              <p class="projects__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi maiores eligendi corrupti tempora temporibus fuga fugit nam alias. Quo ullam necessitatibus itaque obcaecati distinctio nisi voluptate maiores, fuga totam deleniti!</p>
+                              <a target="_blank" href="https://marienkow.github.io/landing_2/" class="btn projects__visite">visite</a>
+                           </article>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="reviews">
+            <div class="container">
+               <div class="reviews__inner">
+                  <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100" data-aos-delay="0" class="reviews__title">reviews</h1>
+                  <section data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="0" class="reviews__main">
+                     <div class="reviews__slider">
+                        <section class="reviews__block">
+                           <div class="reviews__persone">
+                              <img src="img/reviews/10-Things-We-Can-Learn-From-the-Incredible-Steve-Jobs.jpg" alt="persone-photo">
+                              <h3 class="reviews__name">Steve Jobs</h3>
+                              <h5 class="reviews__post">CEO of Apple Inc.</h5>
+                           </div>
+                           <article class="reviews__text">
+                              "Denis is a good frontend developer.He delivered high-quality work promptly and understood my needs with minimal explanation. He always responses quickly and ask questions if necessary I highly recommend him and look forward to working with him again in the future."
+                           </article>
+                        </section>
+                        <section class="reviews__block">
+                           <div class="reviews__persone">
+                              <img src="img/reviews/Elon+Musk.jpg" alt="persone-photo">
+                              <h3 class="reviews__name">Elon Musk</h3>
+                              <h5 class="reviews__post">Founder, CEO, and chief engineer of SpaceX</h5>
+                           </div>
+                           <article class="reviews__text">
+                              "Denis is a good frontend developer.He delivered high-quality work promptly and understood my needs with minimal explanation. He always responses quickly and ask questions if necessary I highly recommend him and look forward to working with him again in the future."
+                           </article>
+                        </section>
+                        <section class="reviews__block">
+                           <div class="reviews__persone">
+                              <img src="img/reviews/tech-antitrust-hearing-3-6_750xx2475-3300-0-0.jpg" alt="persone-photo">
+                              <h3 class="reviews__name">Mark Zuckerberg</h3>
+                              <h5 class="reviews__post">Co-founder, executive chairman and CEO of Meta Platforms</h5>
+                           </div>
+                           <article class="reviews__text">
+                              "Denis is a good frontend developer.He delivered high-quality work promptly and understood my needs with minimal explanation. He always responses quickly and ask questions if necessary I highly recommend him and look forward to working with him again in the future."
+                           </article>
+                        </section>
+                     </div>
+                     <section class="reviews__buttons">
+                        <button class="reviews__prev">
+                           <svg class="reviews__svg">
+                              <use xlink:href="#leftArrow"></use>
+                           </svg>
+                        </button>
+                        <button class="reviews__next">
+                           <svg class="reviews__svg">
+                              <use xlink:href="#rightArrow"></use>
+                           </svg>
+                        </button>
+                     </section>
+                  </section>
+               </div>
+            </div>
+         </div>
+         <div class="contact">
+            <div class="container">
+               <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-300" data-aos-delay="0"  class="contact__inner">
+                  <h1 class="contact__title">Get in Touch</h1>
+                  <p class="contact__subtitle">write something,i will answer you as soon as possible</p>
+               </div>
+               <form action="#" method="post">
+                  <section data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-300" data-aos-delay="0"  class="contact__line contact__line--name">
+                     <span>Full Name</span>
+                     <input data-input data-type="name" class="shadow contact__input" placeholder="Your Full Name" type="text">
+                  </section>
+                  <section data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-300" data-aos-delay="0"  class="contact__line contact__line--mail">
+                     <span>Mail</span>
+                     <input data-input data-type="mail" class="shadow contact__input" placeholder="Your Mail" type="text">
+                  </section>
+                  <section data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-300" data-aos-delay="0"  class="contact__line contact__line--question">
+                     <span>Question</span>
+                     <textarea data-input data-type="question" placeholder="Write your question" class="shadow contact__input contact__input--textArea" name="input" id="question" cols="30" rows="5"></textarea>
+                  </section>
+                  <button class="btn contact__btn _ajaxFormSend">Send Message</button>
+               </form>
+            </div>
+         </div>
+      </main>
+      <footer class="footer shadow">
+         <div class="container">
+            <div class="footer__inner">
+               <section class="footer__info">
+                  <h1 class="footer__title transparentStroke transparentStroke--white">Denis Marienkow</h1>
+                  <p class="footer__subtitle">A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
+               </section>
+               <section class="footer__social">
+                  <h1 class="footer__title transparentStroke transparentStroke--white">Links</h1>
+                  <section class="footer__links">
+                     <a target="_blank" href="https://t.me/Denis_Marienkow" class="footer__link">
+                        <svg class="svg intro__svg">
+                           <use xlink:href="#telegram"></use>
+                        </svg>
+                     </a>
+                     <a target="_blank" href="https://www.linkedin.com/in/denis-marienkov-62b91b25b/" class="footer__link">
+                        <svg class="svg intro__svg">
+                           <use xlink:href="#linked"></use>
+                        </svg>
+                     </a>
+                     <a target="_blank" href="https://www.upwork.com/freelancers/~01cd230a15ab74dae7" class="footer__link">
+                        <svg class="svg intro__svg">
+                           <use xlink:href="#work"></use>
+                        </svg>
+                     </a>
+                     <a target="_blank" href="https://github.com/MARIENKOW" class="footer__link">
+                        <svg class="svg intro__svg">
+                           <use xlink:href="#github"></use>
+                        </svg>
+                     </a>
+                  </section>
+               </section>
+            </div>
+         </div>
+         <div class="footer__copyright">
+            <div class="container">
+               <h6 class="footer__copyright--in">
+                  © Copyright 2023. Made by Ram Maheshwari
+               </h6>
+            </div>
+         </div>
+      </footer>
+   </section>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   <script type="module" src="js/module.js/jquery-3.6.1.min.js"></script>
+   <script type="module" src="js/module.js/slick.min.js"></script>
+   <script type="module" src="js/app.js"></script>
+   <script type="module" src="js/module.js/send.js"></script>
+</body>
+</html>
